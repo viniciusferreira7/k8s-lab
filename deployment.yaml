@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 
 metadata:
-  name: nginx
+  name: fast-feet-api
 
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: nginx
+      app: fast-feet-api
   template:
     metadata:
       labels:
-        app: nginx
+        app: fast-feet-api
     spec:
       containers:
-        - name: nginx
-          image: nginx:trixie-perl
+        - name: fast-feet-api
+          image: vinciusaf/fast-feet-api:97c5bcb
           ports:
            - containerPort: 80
           resources:
