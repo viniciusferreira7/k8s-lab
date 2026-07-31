@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: fast-feet-api
-          image: vinciusaf/fast-feet-api:97c5bcb
+          image: vinciusaf/fast-feet-api:974991b
           imagePullPolicy: IfNotPresent
           ports:
            - containerPort: 80
