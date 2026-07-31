@@ -5,7 +5,12 @@ metadata:
   name: fast-feet-api
 
 spec:
-  replicas: 2
+  replicas: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 50%
+      maxUnavailable: 20% 
   selector:
     matchLabels:
       app: fast-feet-api
