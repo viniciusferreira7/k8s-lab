@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+
+metadata: 
+  name: fast-feet-api
+data:
+  SERVICE_NAME: "fast-feet-api"
+  PORT: "3333"
