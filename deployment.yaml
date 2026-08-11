@@ -23,6 +23,11 @@ spec:
         - name: fast-feet-api
           image: vinciusaf/fast-feet-api:974991b
           imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: fast-feet-api-config
+            - secretRef:
+                name: fast-feet-api-secrets
           ports:
            - containerPort: 80
           resources:
