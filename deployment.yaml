@@ -5,7 +5,7 @@ metadata:
   name: fast-feet-api
 
 spec:
-  replicas: 10
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
