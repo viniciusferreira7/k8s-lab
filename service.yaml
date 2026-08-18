@@ -3,6 +3,8 @@ kind: Service
 
 metadata:
   name: fast-feet-api-svc
+  namespace: k8s-lab
+
 spec: 
   type: ClusterIP
   selector: 

@@ -3,6 +3,8 @@ kind: ConfigMap
 
 metadata: 
   name: fast-feet-api-config
+  namespace: k8s-lab
+
 data:
   SERVICE_NAME: "fast-feet-api"
   PORT: "3333"
