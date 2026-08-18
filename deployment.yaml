@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: fast-feet-api
-          image: vinciusaf/fast-feet-api:974991b
+          image: vinciusaf/fast-feet-api:f09532a
           imagePullPolicy: IfNotPresent
           envFrom:
             - configMapRef:
