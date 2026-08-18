@@ -3,7 +3,7 @@ kind: ConfigMap
 
 metadata: 
   name: fast-feet-api-config
-  namespace: k8s-lab
+  namespace: k8s-lab-ns
 
 data:
   SERVICE_NAME: "fast-feet-api"

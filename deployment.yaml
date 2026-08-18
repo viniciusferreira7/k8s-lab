@@ -3,7 +3,7 @@ kind: Deployment
 
 metadata:
   name: fast-feet-api
-  namespace: k8s-lab
+  namespace: k8s-lab-ns
 
 spec:
   replicas: 2
