@@ -12,4 +12,5 @@ spec:
   minReplicas: 3
   maxReplicas: 8
   targetCPUUtilizationPercentage: 75
-    
+
+# HPA V1 is deprecated
