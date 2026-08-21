@@ -1,0 +1,14 @@
+apiVersion: autoscaling
+kind: HorizontalPodAutoscaler
+
+metadata:
+  name: fast-feet-api-hpa
+spec:
+  scaleTargetRef: 
+    apiVersion: apps/v1
+    kind: Deployment
+    name: fast-feet-api
+  minReplicas: 3
+  maxReplicas: 8
+  targetCPUUtilizationPercentage: 80
+    
