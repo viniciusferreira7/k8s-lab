@@ -1,8 +1,9 @@
-apiVersion: autoscaling
+apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 
 metadata:
   name: fast-feet-api-hpa
+  namespace: k8s-lab-ns
 spec:
   scaleTargetRef: 
     apiVersion: apps/v1
@@ -10,5 +11,5 @@ spec:
     name: fast-feet-api
   minReplicas: 3
   maxReplicas: 8
-  targetCPUUtilizationPercentage: 80
+  targetCPUUtilizationPercentage: 75
     
