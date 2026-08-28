@@ -9,8 +9,8 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: fast-feet-api
-  minReplicas: 3
-  maxReplicas: 8
+  minReplicas: 4
+  maxReplicas: 10
   metrics:
     - type: Resource
       resource:
@@ -24,4 +24,17 @@ spec:
         target: 
           type: Utilization
           averageUtilization: 80
+  behavior: 
+    scaleDown:
+      stabilizationWindowSeconds: 120
+      policies: 
+        - type: Pods
+          value: 2
+          periodSeconds: 15
+        - type: Percent
+          value: 10
+          periodSeconds: 30
+    selectPolicy: Min
+
+
 
