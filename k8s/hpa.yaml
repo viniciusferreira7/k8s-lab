@@ -26,25 +26,25 @@ spec:
           averageUtilization: 80
   behavior: 
     scaleDown:
-      stabilizationWindowSeconds: 120
+      stabilizationWindowSeconds: 300
       policies: 
         - type: Pods
           value: 2
-          periodSeconds: 15
+          periodSeconds: 30
         - type: Percent
           value: 10
           periodSeconds: 30
       selectPolicy: Min
 
     scaleUp:
-      stabilizationWindowSeconds: 5
+      stabilizationWindowSeconds: 0
       policies:
         - type: Pods
           value: 2
-          periodSeconds: 5
+          periodSeconds: 30
         - type: Percent
-          value: 20
-          periodSeconds: 5
+          value: 25
+          periodSeconds: 30
         
       selectPolicy: Max
 
