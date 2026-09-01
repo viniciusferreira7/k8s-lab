@@ -31,6 +31,14 @@ spec:
                 name: fast-feet-api-secrets
           ports:
            - containerPort: 80
+          startupProbe: 
+            httpGet: 
+              path: /api/health/startup
+              port: 80
+            failureThreshold: 3
+            successThreshold: 1
+            timeoutSeconds: 1
+            periodSeconds: 10
           resources:
             requests:
               cpu: 150m
