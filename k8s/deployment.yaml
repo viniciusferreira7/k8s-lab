@@ -48,6 +48,7 @@ spec:
             successThreshold: 1
             timeoutSeconds: 3
             periodSeconds: 10
+            initialDelaySeconds: 5
           livenessProbe: 
             httpGet: 
               path: /api/health/live
@@ -56,6 +57,7 @@ spec:
             successThreshold: 1
             timeoutSeconds: 3
             periodSeconds: 30
+            initialDelaySeconds: 5
           resources:
             requests:
               cpu: 150m
