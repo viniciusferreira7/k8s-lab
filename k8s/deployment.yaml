@@ -65,3 +65,10 @@ spec:
             limits:
               cpu: 300m
               memory: 320Mi
+          volumeMounts:
+            - name: k8s-lab-data
+              mountPath: /app/files
+      volumes:
+        - name: k8s-lab-data
+          persistentVolumeClaim: 
+            claimName: k8s-lab-pvc
