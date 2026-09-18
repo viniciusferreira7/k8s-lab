@@ -1,7 +1,5 @@
 # k8s-lab
 
-> 🚧 **WIP** — Work in progress.
-
 A study project for learning **Kubernetes** using [kind](https://kind.sigs.k8s.io/) (Kubernetes IN Docker) to run local clusters.
 
 The lab deploys a sample API (`fast-feet-api`) into a dedicated namespace, exposes it through a
